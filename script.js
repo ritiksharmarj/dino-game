@@ -1,8 +1,10 @@
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
+const gameOver = document.querySelector('span');
 
 function jump() {
   if (dino.classList != 'jump') {
+    gameOver.classList.add('hidden');
     dino.classList.add('jump');
 
     // Remove jump class once the timer expires
@@ -35,11 +37,16 @@ let isAlive = setInterval(() => {
 
   // Detect collision
   if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
-    alert('Game Over!');
+    gameOver.classList.remove('hidden');
+    cactus.classList.remove('cactus-slide');
   }
 }, 10);
 
 // Add event listener on keydown (keyboard keys)
 document.addEventListener('keydown', () => {
   jump();
+
+  setTimeout(() => {
+    cactus.classList.add('cactus-slide');
+  }, 300);
 });
