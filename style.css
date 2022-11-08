@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 * {
   padding: 0;
@@ -87,6 +88,7 @@
 
 span {
   font-family: 'Press Start 2P', cursive, sans-serif;
+  color: #000000;
   font-size: 24px;
   position: absolute;
   top: 50%;
@@ -96,4 +98,24 @@ span {
 
 .hidden {
   display: none;
+}
+
+.copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 60px;
+  color: #000000;
+}
+
+.copyright a {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #000000;
 }
